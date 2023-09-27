@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java script</title>
+  </head>
+  <body>
+    <h1>โปรแกรมหาพื้นที่สามเหลี่ยม</h1>
+    <h3>
+        <label for="width"> ความยาวของฐาน: </label>
+        <input type="number" id="width">
+        <label for="height">ความสูงของฐาน: </label>
+        <input type="number" id="height">
+    </h3>
+    <button onclick="CalculateArea()">คำนวณ</button>
+    <p id="result"></p>
+
+    <script>
+        function CalculateArea() {
+            const width = document.getElementById("width").value;
+            const height = document.getElementById("height").value;
+            const area = (width * height) / 2;
+            
+            const resultElement = document.getElementById("result");
+            resultElement.style.color = "blue";
+            resultElement.style.fontSize = "30px"; 
+
+            resultElement.textContent = "พื้นที่ของสามเหลี่ยมคือ: " + area;
+        }
+    </script>
+  </body>
+</html>
